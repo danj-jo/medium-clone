@@ -26,8 +26,10 @@ export default function TabLayout() {
         }),
         headerStyle: {
             backgroundColor: colorScheme === 'light' ? "#36465D" : "black",
-            height: 150
 
+        },
+        tabBarIconStyle: {
+            marginTop: 10
         }
       }}>
       <Tabs.Screen

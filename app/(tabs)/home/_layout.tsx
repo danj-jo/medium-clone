@@ -17,10 +17,10 @@ export const MaterialTopTabs = withLayoutContext<MaterialTopTabNavigationOptions
 
 const Home = () => {
     return (
-        <View style={{height: "auto", flex: 1, backgroundColor: "#36465D", maxHeight: 180, minWidth: 300}}>
+        <View style={{flex: 1,  backgroundColor: "#36465D", minHeight: 180}}>
             <View style={{flexDirection: "row", justifyContent: "space-between"}}>
                 <Image
-                    source={{uri: "/Users/nolimit/repos/medium-clone/assets/images/tumblrLogo.png"}}
+                    source={{uri: "/Users/nolimit/repos/tumblr-clone/assets/images/tumblrLogo.png"}}
                     resizeMethod={"auto"}
                     style={{width: 20, height: 35, marginTop: 70, marginLeft: 20}}/>
                 <View style={{flexDirection: "row", marginRight: 10}}>
@@ -38,19 +38,14 @@ const Home = () => {
                     tabBarActiveTintColor: 'white',
                     tabBarIndicatorStyle: {
                         backgroundColor: "white",
-
                       marginBottom: 15
                     },
                     tabBarStyle: {
                         backgroundColor: "#36465D",
-                        borderColor: "red",
-                        borderWidth: 2,
-                        alignItems: "center",
-                        alignContent: "center"
+
                     },
                     tabBarItemStyle: {
-                        borderColor: "red",
-                        borderWidth: 2,
+
 
                     },
                     tabBarContentContainerStyle: {

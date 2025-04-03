@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
+import Post from "@/components/ui/post";
 
 const Foryou = () => {
   return (
-    <View>
-      <Text>For You</Text>
-    </View>
+<View style={{backgroundColor: "#36465D", height:" 100%"}}>
+    <Post content={"Hello"} notes={"0"} type="string" />
+</View>
   );
 };
 
