@@ -9,7 +9,7 @@ import {Colors} from "@/constants/Colors";
 const Post  = (post:  post) => {
   return (
       <ScrollView>
-    <View style={{backgroundColor: "white", minHeight: 300, borderWidth: 2, borderColor: "brown"}}>
+    <View style={{backgroundColor: "white", minHeight: 300}}>
      <View style={{flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 20}}>
         <Image  source={{uri: "/Users/nolimit/repos/tumblr-clone/assets/images/favicon.png"}}
                 resizeMethod={"auto"}
@@ -25,29 +25,27 @@ const Post  = (post:  post) => {
          </View>
 
      </View>
-        <View style={{height: "auto", borderWidth: 2, borderColor: "red", backgroundColor: "gray" }}>
-            <View style={{minHeight: 350}}>
-                {post.type == "string" ? <Text> {post.content} </Text> : <Image source={{uri: post.content}} />}
-            </View>
-            <View style={{backgroundColor: "white", paddingLeft: 10, paddingRight: 10}}>
-             <Text> {post.description}  </Text>
-            <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
 
-                {post.notes > 0 ? <View
+        <View style={{minHeight: 200, borderWidth: 2, borderColor: "red"}}>
+                {post.type == "string" ? <Text> {post.content} </Text> : <Image source={{uri: post.content}} style={{width: "100%", minHeight: 300}} />}
+        </View>
+        {post.description && <View style={{paddingLeft: 10, paddingRight: 10}}>
+            <Text> {post.description}  </Text>
+        </View>}
+            <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", borderWidth:2, paddingTop: 10, paddingLeft: 10, paddingBottom: 10}}>
+                {post.notes && post.notes > 0  ? <View
                     style={{backgroundColor: "#EEEEEE", width: 70, borderRadius: 50, flexDirection: "row", padding: 5}}>
-                    <Text>{post.notes}</Text>
-                    <Text style={{color: Colors.light.icon}}> notes </Text>
-                </View> : <View>></View>}
-
-                <View style={{flexDirection: "row", gap: 10, marginBottom: 5}}>
+                    <Text style={{color: Colors.light.icon}}> {post.notes} notes </Text>
+                </View> : <View></View>}
+                <View style={{flexDirection: "row", gap: 10, paddingRight: 10}}>
                     <Feather name={"share"} color={Colors.light.icon} size={25} />
                     <EvilIcons name={"comment"} color={Colors.light.icon} size={25} />
                     <Feather name={"repeat"} color={Colors.light.icon} size={25} />
                     <Feather name={"heart"} color={Colors.light.icon} size={25}/>
                 </View>
+
             </View>
-            </View>
-        </View>
+
          </View>
 
       </ScrollView>

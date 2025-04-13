@@ -1,6 +1,6 @@
 export interface post {
     content: string,
-    notes: number,
+    notes?: number,
     description?: string,
     type: string
 }

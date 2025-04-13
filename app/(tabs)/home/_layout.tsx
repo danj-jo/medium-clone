@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Pressable} from 'react-native';
 import {
     createMaterialTopTabNavigator
     , MaterialTopTabNavigationOptions,
     MaterialTopTabNavigationEventMap
 } from "@react-navigation/material-top-tabs";
-import {withLayoutContext} from "expo-router";
+import {Stack, withLayoutContext} from "expo-router";
 import {ParamListBase, TabNavigationState} from "@react-navigation/native";
 import {MaterialIcons} from "@expo/vector-icons";
 
@@ -32,7 +32,6 @@ const Home = () => {
             </View>
 
             <MaterialTopTabs
-
                 screenOptions={{
                     tabBarInactiveTintColor: 'gray',
                     tabBarActiveTintColor: 'white',
@@ -44,12 +43,6 @@ const Home = () => {
                         backgroundColor: "#36465D",
 
                     },
-                    tabBarItemStyle: {
-
-
-                    },
-                    tabBarContentContainerStyle: {
-                    }
                 }}>
                 <MaterialTopTabs.Screen name={"foryou"} options={{
                     title: "For You",
@@ -63,9 +56,7 @@ const Home = () => {
                         tabBarActiveTintColor: "white",
                         tabBarIcon: () => <MaterialIcons name={"tune"} color={"white"} size={22}
                                                          style={{marginLeft: 53, marginTop: 10,
-
                                                          }}/>,
-
                     }}/>
 
             </MaterialTopTabs>
